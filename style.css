@@ -1,0 +1,149 @@
+/* Fonte global */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Card do chat */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-top: -5px;
+}
+
+/* Área de respostas */
+#resposta {
+  flex: 1;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Mensagens gerais */
+.mensagem {
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Mensagem do usuário */
+.mensagem-usuario {
+  background-color: #0078ff;
+  color: white;
+  align-self: flex-end;
+  max-width: 70%;
+}
+
+/* Mensagem do bot */
+.mensagem-bot {
+  background-color: #e0e0e0;
+  color: black;
+  align-self: flex-start;
+  max-width: 70%;
+}
+
+/* Timestamps (opcional) */
+.timestamp {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
+  text-align: right;
+}
+
+/* Input e botão */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+#pergunta {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+#pergunta:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#botao {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #0078ff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Indicador de digitando */
+.digitando {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: #e0e0e0;
+  color: black;
+  font-style: italic;
+  max-width: 60%;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.digitando span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 2px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+.digitando span:nth-child(2) { animation-delay: 0.2s; }
+.digitando span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}

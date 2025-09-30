@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CHATBOT TESTE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>OLÁ, SEJA BEM-VINDO!</h1>
+    <p><em>Faça uma pergunta para o nosso chat</em></p>
+
+    <div id="resposta" class="resposta"></div>
+
+    <div id="loading" class="loading" style="display:none;">Carregando...</div>
+
+    <div class="input-group">
+      <input type="text" id="pergunta" autocomplete="off" placeholder="Digite sua pergunta...">
+      <button id="botao" onclick="perguntar()">Enviar</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
