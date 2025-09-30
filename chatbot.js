@@ -17,7 +17,7 @@ async function perguntar() {
     resposta.scrollTop = resposta.scrollHeight;
 
     try {
-        const apiKey = "AIzaSyBVQqq7fFc-bH0JeD0lY-KK50Wk6di6qSE"; 
+        const apiKey = "n disponivel"; 
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
         const body = { contents: [{ parts: [{ text: pergunta }] }] };
 
@@ -84,4 +84,5 @@ input.addEventListener("keydown", function(event) {
         event.preventDefault();     
         perguntar();                
     }
+
 });
